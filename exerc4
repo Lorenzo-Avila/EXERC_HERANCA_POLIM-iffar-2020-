@@ -1,0 +1,70 @@
+/* Alunos: Lorenzo de Ávila Carpes, Rafael Alemida Hubner */
+<?php
+abstract class Animal{
+	protected $nome;
+	protected $idade;
+
+    function getNome(){
+        return $this->nome;
+    }
+    function getIdade(){
+        return $this->idade;
+    }
+    function setNome($nome){
+        $this->nome = $nome;
+    }
+     function setIdade($idade){
+        $this->idade = $idade;
+    }
+    abstract function som();
+    abstract function funcao();
+}
+
+class Cachorro extends Animal{
+    public function som(){
+        echo "Som de cachorro!";
+    }
+    public function funcao(){
+        echo "<p>Deve correr</p>";
+    }
+}
+
+class Cavalo extends Animal{
+    public function som(){
+        echo "Som de cavalo!";
+    }
+    public function funcao(){
+        echo "<p> Deve correr</p>";
+    }
+}
+
+class Preguica extends Animal{
+    public function som(){
+        echo "Som de preguiça!";
+    }
+    public function funcao(){
+        echo "<p> Deve subir em árvores</p>";
+    }
+}
+class Veterinario{
+
+    function examina($animal){
+        echo "<br>";
+        echo "Animal examinado";
+        echo "<br>";
+        $animal->som();
+        echo "<br>";
+    }
+}
+
+$dog = new Cachorro();
+$ca = new Cavalo();
+$preg = new Preguica();
+
+$vet1 = new Veterinario();
+$vet2 = new Veterinario();
+$vet3 = new Veterinario();
+
+$vet1->examina($dog);
+$vet2->examina($ca);
+$vet3->examina($preg);

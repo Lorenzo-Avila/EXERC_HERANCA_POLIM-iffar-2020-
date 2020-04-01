@@ -1,0 +1,73 @@
+/* Alunos: Lorenzo de Ávila Carpes, Rafael Almeida Hubner*/
+abstract class Veiculo{
+	protected $modelo;
+	protected $velocidade;
+    protected $passageiros;
+    protected $combustivel;
+
+    function getModelo(){
+        return $this->modelo;
+    }
+    function getVelocidade(){
+        return $this->velocidade;
+    }
+    function getPassageiros(){
+        return $this->passageiros;
+    }
+    function getCombustivel(){
+        return $this->combustivel;
+    }
+    function setModelo($modelo){
+        $this->modelo = $modelo;
+    }
+     function setVelocidade($velocidade){
+        $this->velocidade = $velocidade;
+    }
+     function setPassageiros($passageiros){
+        $this->passageiros = $passageiros;
+    }
+     function setCombustivel($combustivel){
+        $this->combustivel = $combustivel;
+    }
+}
+
+class Carro extends Veiculo{
+    private $portas;
+    private $ano;
+
+    function getPortas(){
+        return $this->portas;
+    }
+    function getAno(){
+        return $this->ano;
+    }
+    function setPortas($portas){
+        $this->portas = $portas;
+    }
+     function setAno($ano){
+        $this->ano = $ano;
+    }
+}
+
+class Aviao extends Veiculo{
+    private $uso;
+    private $tipo;
+
+    function getUso(){
+        return $this->uso;
+    }
+    function getTipo(){
+        return $this->tipo;
+    }
+    function setUso(){
+        $this->uso = $uso;
+    }
+    function setTipo(){
+        $this->tipo = $tipo;
+    }
+}
+//Criação dos veículos
+$v1 = new Carro();
+$v2 = new Carro();
+$v3 = new Aviao();
+$v4 = new Aviao();

@@ -1,0 +1,61 @@
+/* Alunos: Lorenzo de Ávila Carpes, Rafael Alemida Hubner */
+<?php
+ abstract class Imovel{
+	protected $endereco;
+	protected $preco;
+
+    function getEndereco(){
+        return $this->endereco;
+    }
+    function getPreco(){
+        return $this->preco;
+    }
+    function setEndereco($endereco){
+        $this->endereco = $endereco;
+    }
+     function setPreco($preco){
+        $this->preco = $preco;
+    }
+}
+
+class Novo extends Imovel{
+    public $acresc;
+    function imovel(){
+        $this->endereco = $endereco;
+        $this->preco = $preco;
+    }
+    function getAcrescimo(){
+        return $this->acresc;
+    }
+    function setAcrescimo(){
+        $this->acresc = $acresc;
+    }
+    function calcAcres($acresc, $preco){
+       $preco = $preco * $acresc;
+       $this->preco;
+    }
+    function mostraPreco($preco){
+        echo "Valor com acrescimo fica: $preco"
+;    }
+}
+
+class Velho extends Imovel{
+ public $desc;
+    function imovel(){
+        $this->endereco = $endereco;
+        $this->preco = $preco;
+    }
+    function getDesconto(){
+        return $this->desc;
+    }
+    function setDesconto(){
+        $this->desc = $desc;
+    }
+    function calcDesc($desc, $preco){
+       $preco = $preco * $desc;
+       $this->preco;
+    }
+    function mostraPreco($preco){
+        echo "Valor com desconto fica: $preco"
+;    }
+}

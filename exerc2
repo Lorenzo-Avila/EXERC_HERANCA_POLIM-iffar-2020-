@@ -1,0 +1,41 @@
+/* Alunos: Lorenzo de Ávila Carpes, Rafael Alemida Hubner */
+<?php
+abstract class Animal{
+	protected $nome;
+	protected $idade;
+
+    function getNome(){
+        return $this->nome;
+    }
+    function getIdade(){
+        return $this->idade;
+    }
+    function setNome($nome){
+        $this->nome = $nome;
+    }
+     function setIdade($idade){
+        $this->idade = $idade;
+    }
+    public function emitirSom(){
+        echo "<p>Emitindo som</p>";
+    }
+    abstract function funcao();
+}
+
+class Cachorro extends Animal{
+    public function funcao(){
+        echo "<p>Deve correr</p>";
+    }
+}
+
+class Cavalo extends Animal{
+    public function funcao(){
+        echo "<p> Deve correr</p>";
+    }
+}
+
+class Preguica extends Animal{
+    public function funcao(){
+        echo "<p> Deve subir em árvores</p>";
+    }
+}
